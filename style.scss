@@ -1,0 +1,158 @@
+article {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: black;
+    width: 450px;
+    padding: 0 0 30px 15px;
+
+    section {
+        position: relative;
+
+        p {
+            color: white;
+            font-size: 100px;
+            position: absolute;
+            right: 10px;
+
+        }
+    }
+}
+
+.numbers {
+    display: flex;
+    gap: 10px;
+}
+
+.numbers_action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-color: #ff9f0a;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        border: none;
+
+        &:hover {
+            background-color: #fbc78e;
+            transition-duration: 0.5s;
+        }
+
+
+    }
+
+}
+
+.numbers_3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-color: #323232;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        border: none;
+
+        &:first-child {
+            background-color: #a5a5a5;
+            color: black;
+        }
+
+        &:hover {
+            background-color: #737373;
+            transition-duration: 0.5s;
+        }
+
+        &:first-child:hover {
+            background-color: #d9d9d9;
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+.numbers_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-color: #323232;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        border: none;
+
+        &:first-child {
+            background-color: #a5a5a5;
+            color: black;
+        }
+
+        &:hover {
+            background-color: #737373;
+            transition-duration: 0.5s;
+        }
+
+        &:first-child:hover {
+            background-color: #d9d9d9;
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+.numbers_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-color: #323232;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        border: none;
+
+        &:first-child {
+            background-color: #a5a5a5;
+            color: black;
+        }
+
+        &:last-child {
+            border-radius: 50px;
+            width: 200px;
+            bottom: 0px;
+            position: absolute;
+            padding-left: 40px;
+            text-align: start;
+        }
+
+        &:hover {
+            background-color: #737373;
+            transition-duration: 0.5s;
+        }
+
+        &:first-child:hover {
+            background-color: #d9d9d9;
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+.result_screen {
+    background-color: black;
+    height: 250px;
+}

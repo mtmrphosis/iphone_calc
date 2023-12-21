@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article>
+        <section class="result_screen">
+            <p id="results">0</p>
+        </section>
+        <section class="numbers">
+            <div class="numbers_1">
+                <button onclick="clearButton()">AC</button>
+                <button onclick="numberSeven()">7</button>
+                <button onclick="numberFour()">4</button>
+                <button onclick="numberOne()">1</button>
+                <button onclick="numberZero()">0</button>
+            </div>
+            <div class="numbers_2">
+                <button>+/-</button>
+                <button onclick="numberEight()">8</button>
+                <button onclick="numberFive()">5</button>
+                <button onclick="numberTwo()">2</button>
+            </div>
+            <div class="numbers_3">
+                <button>%</button>
+                <button onclick="numberNine()">9</button>
+                <button onclick="numberSix()">6</button>
+                <button onclick="numberThree()">3</button>
+                <button>.</button>
+            </div>
+            <div class="numbers_action">
+                <button onclick="divide()">÷</button>
+                <button id="multiply">×</button>
+                <button id="minus">-</button>
+                <button id="plus">+</button>
+                <button id="equal">=</button>
+            </div>
+        </section>
+    </article>
+</body>
+
+</html>
