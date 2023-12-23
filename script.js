@@ -144,3 +144,9 @@ function numberFloat() {
     }
 }
 
+function onePercent() {
+    let zeroCheck = document.getElementById("results").textContent;
+    let promejytok = zeroCheck / 100;
+    let a = document.getElementById("results").value = promejytok;
+    document.getElementById("results").innerHTML = a;
+}   
