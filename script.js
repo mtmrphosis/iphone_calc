@@ -1,3 +1,5 @@
+var sum1;
+var sum2;
 
 function numberZero() {
     let zeroCheck = document.getElementById("results").textContent;
@@ -145,8 +147,69 @@ function numberFloat() {
 }
 
 function onePercent() {
+
     let zeroCheck = document.getElementById("results").textContent;
-    let promejytok = zeroCheck / 100;
+    let promejytok = (zeroCheck / 100).toPrecision(2);
     let a = document.getElementById("results").value = promejytok;
     document.getElementById("results").innerHTML = a;
-}   
+}
+
+function plus() {
+    sum1 = document.getElementById("results").textContent;
+    let a = document.getElementById("results").value = "+";
+    document.getElementById("results").innerHTML = a;
+}
+
+function minus() {
+    sum1 = document.getElementById("results").textContent;
+    let a = document.getElementById("results").value = "-";
+    document.getElementById("results").innerHTML = a;
+}
+
+function divide() {
+    sum1 = document.getElementById("results").textContent;
+    let a = document.getElementById("results").value = "÷";
+    document.getElementById("results").innerHTML = a;
+}
+
+function multiply() {
+    sum1 = document.getElementById("results").textContent;
+    let a = document.getElementById("results").value = "×";
+    document.getElementById("results").innerHTML = a;
+}
+
+function equal() {
+    sum2 = document.getElementById("results").textContent;
+    if (sum2.includes("+")) {
+        let a = document.getElementById("results").value = +sum1 + +sum2;
+        if (sum1.includes(".") || sum2.includes(".")) {
+            document.getElementById("results").innerHTML = a.toFixed(4);
+        } else {
+            document.getElementById("results").innerHTML = a.toFixed(0);
+        }
+    } else if (sum2.includes("-")) {
+        sum2 = sum2.replace('-', '');
+        let a = document.getElementById("results").value = Number(sum1 - sum2);
+        if (sum1.includes(".") || sum2.includes(".")) {
+            document.getElementById("results").innerHTML = a.toFixed(4);
+        } else {
+            document.getElementById("results").innerHTML = a.toFixed(0);
+        }
+    } else if (sum2.includes("×")) {
+        sum2 = sum2.replace('×', '');
+        let a = document.getElementById("results").value = Number(sum1 * sum2);
+        if (sum1.includes(".") || sum2.includes(".")) {
+            document.getElementById("results").innerHTML = a.toFixed(4);
+        } else {
+            document.getElementById("results").innerHTML = a.toFixed(0);
+        }
+    } else if (sum2.includes("÷")) {
+        sum2 = sum2.replace('÷', '');
+        let a = document.getElementById("results").value = Number(sum1 / sum2);
+        if (sum1.includes(".") || sum2.includes(".")) {
+            document.getElementById("results").innerHTML = a.toFixed(4);
+        } else {
+            document.getElementById("results").innerHTML = a.toFixed(0);
+        }
+    }
+}

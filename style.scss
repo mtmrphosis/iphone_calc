@@ -12,7 +12,9 @@ article {
             font-size: 100px;
             position: absolute;
             right: 10px;
-
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
 }
