@@ -213,3 +213,16 @@ function equal() {
         }
     }
 }
+
+var i = 0;
+
+function countMinus() {
+    let zeroCheck = document.getElementById("results").textContent;
+    if (zeroCheck.includes("-")) {
+        let b = document.getElementById("results").value = zeroCheck.replace('-', '');
+        document.getElementById("results").innerHTML = b;
+    } else {
+        let a = document.getElementById("results").value = `-${zeroCheck}`;
+        document.getElementById("results").innerHTML = a;
+    }
+}
