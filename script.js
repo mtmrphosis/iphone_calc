@@ -1,9 +1,10 @@
 var sum1;
 var sum2;
+var symbol;
 
 function numberZero() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +0;
@@ -16,7 +17,7 @@ function numberZero() {
 
 function numberOne() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +1;
@@ -29,7 +30,7 @@ function numberOne() {
 
 function numberTwo() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +2;
@@ -42,7 +43,7 @@ function numberTwo() {
 
 function numberThree() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +3;
@@ -55,7 +56,7 @@ function numberThree() {
 
 function numberFour() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +4;
@@ -68,7 +69,7 @@ function numberFour() {
 
 function numberFive() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +5;
@@ -81,7 +82,7 @@ function numberFive() {
 
 function numberSix() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +6;
@@ -94,7 +95,7 @@ function numberSix() {
 
 function numberSeven() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +7;
@@ -107,7 +108,7 @@ function numberSeven() {
 
 function numberEight() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +8;
@@ -120,7 +121,7 @@ function numberEight() {
 
 function numberNine() {
     let zeroCheck = document.getElementById("results").textContent;
-    if (zeroCheck == "0") {
+    if (zeroCheck == "0" || zeroCheck == "-0") {
         let a = document.getElementById("results").value = "";
         document.getElementById("results").innerHTML = a;
         let b = document.getElementById("results").value = +9;
@@ -155,39 +156,43 @@ function onePercent() {
 }
 
 function plus() {
+    symbol = '+';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "+";
+    let a = document.getElementById("results").value = "";
     document.getElementById("results").innerHTML = a;
 }
 
 function minus() {
+    symbol = '-';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "-";
+    let a = document.getElementById("results").value = "";
     document.getElementById("results").innerHTML = a;
 }
 
 function divide() {
+    symbol = '÷';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "÷";
+    let a = document.getElementById("results").value = "";
     document.getElementById("results").innerHTML = a;
 }
 
 function multiply() {
+    symbol = '×';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "×";
+    let a = document.getElementById("results").value = "";
     document.getElementById("results").innerHTML = a;
 }
 
 function equal() {
     sum2 = document.getElementById("results").textContent;
-    if (sum2.includes("+")) {
+    if (symbol === "+") {
         let a = document.getElementById("results").value = +sum1 + +sum2;
         if (sum1.includes(".") || sum2.includes(".")) {
             document.getElementById("results").innerHTML = a.toFixed(4);
         } else {
             document.getElementById("results").innerHTML = a.toFixed(0);
         }
-    } else if (sum2.includes("-")) {
+    } else if (symbol === '-') {
         sum2 = sum2.replace('-', '');
         let a = document.getElementById("results").value = Number(sum1 - sum2);
         if (sum1.includes(".") || sum2.includes(".")) {
@@ -195,16 +200,14 @@ function equal() {
         } else {
             document.getElementById("results").innerHTML = a.toFixed(0);
         }
-    } else if (sum2.includes("×")) {
-        sum2 = sum2.replace('×', '');
+    } else if (symbol === '×') {
         let a = document.getElementById("results").value = Number(sum1 * sum2);
         if (sum1.includes(".") || sum2.includes(".")) {
             document.getElementById("results").innerHTML = a.toFixed(4);
         } else {
             document.getElementById("results").innerHTML = a.toFixed(0);
         }
-    } else if (sum2.includes("÷")) {
-        sum2 = sum2.replace('÷', '');
+    } else if (symbol == '÷') {
         let a = document.getElementById("results").value = Number(sum1 / sum2);
         if (sum1.includes(".") || sum2.includes(".")) {
             document.getElementById("results").innerHTML = a.toFixed(4);
@@ -214,7 +217,6 @@ function equal() {
     }
 }
 
-var i = 0;
 
 function countMinus() {
     let zeroCheck = document.getElementById("results").textContent;
