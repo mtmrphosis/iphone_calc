@@ -212,7 +212,7 @@ function equal() {
         if (sum1.includes(".") || sum2.includes(".") || sum1 < sum2) {
             document.getElementById("results").innerHTML = a.toFixed(4);
         } else {
-            document.getElementById("results").innerHTML = a.toFixed(0);
+            document.getElementById("results").innerHTML = a;
         }
     }
     sum1 = '';
