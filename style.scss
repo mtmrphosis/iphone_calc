@@ -183,9 +183,9 @@ article {
             width: 75px;
             height: 75px;
             font-size: 30px;
-            margin: auto;
             display: flex;
-            width: -webkit-fill-available;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -194,9 +194,9 @@ article {
             width: 75px;
             height: 75px;
             font-size: 30px;
-            margin: auto;
             display: flex;
-            width: -webkit-fill-available;
+            justify-content: center;
+            align-items: center;
 
             &:last-child {
                 border-radius: 50px;
@@ -214,9 +214,9 @@ article {
             width: 75px;
             height: 75px;
             font-size: 30px;
-            margin: auto;
             display: flex;
-            width: -webkit-fill-available;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -227,7 +227,8 @@ article {
             font-size: 30px;
             margin: auto;
             display: flex;
-            width: -webkit-fill-available;
+            justify-content: center;
+            align-items: center;
         }
     }
 
