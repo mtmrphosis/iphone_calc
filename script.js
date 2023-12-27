@@ -156,31 +156,47 @@ function onePercent() {
 }
 
 function plus() {
-    symbol = '+';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "";
-    document.getElementById("results").innerHTML = a;
+    if (sum1 != '0') {
+        symbol = '+';
+        let a = document.getElementById("results").value = "";
+        document.getElementById("results").innerHTML = a;
+    } else {
+        console.log('nothing to plus');
+    }
 }
 
 function minus() {
-    symbol = '-';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "";
-    document.getElementById("results").innerHTML = a;
+    if (sum1 != '0') {
+        symbol = '-';
+        let a = document.getElementById("results").value = "";
+        document.getElementById("results").innerHTML = a;
+    } else {
+        console.log('nothing to minus');
+    }
 }
 
 function divide() {
-    symbol = '÷';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "";
-    document.getElementById("results").innerHTML = a;
+    if (sum1 != '0') {
+        symbol = '÷';
+        let a = document.getElementById("results").value = "";
+        document.getElementById("results").innerHTML = a;
+    } else {
+        console.log('nothing to divide');
+    }
 }
 
 function multiply() {
-    symbol = '×';
     sum1 = document.getElementById("results").textContent;
-    let a = document.getElementById("results").value = "";
-    document.getElementById("results").innerHTML = a;
+    if (sum1 != '0') {
+        symbol = '×';
+        let a = document.getElementById("results").value = "";
+        document.getElementById("results").innerHTML = a;
+    } else {
+        console.log('nothing to multiply');
+    }
 }
 
 function equal() {
