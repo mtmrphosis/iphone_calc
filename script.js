@@ -224,8 +224,9 @@ function equal() {
             document.getElementById("results").innerHTML = a.toFixed(0);
         }
     } else if (symbol == '÷') {
+        let result = String(sum1 / sum2);
         let a = document.getElementById("results").value = Number(sum1 / sum2);
-        if (sum1.includes(".") || sum2.includes(".") || sum1 < sum2) {
+        if (sum1.includes(".") || sum2.includes(".") || (sum1 < sum2) || result.includes(".")) {
             document.getElementById("results").innerHTML = a.toFixed(4);
         } else {
             document.getElementById("results").innerHTML = a;
